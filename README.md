@@ -1,7 +1,8 @@
 # THPT-Project-2018 
 BETTER PRODUCT DEVELOPMENT
 
- // solved play just once at the right time 
+ void CheckTime(){
+    // solved play just once at the right time 
   minuteNow = hour*60 + minute;  
   lcd.setCursor(0,2);
   turnOn = true;
@@ -71,3 +72,4 @@ BETTER PRODUCT DEVELOPMENT
         }
       }
   }
+}
