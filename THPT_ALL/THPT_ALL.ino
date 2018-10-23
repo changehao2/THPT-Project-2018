@@ -97,8 +97,8 @@ void CheckTime(){
   minuteNow = hour*60 + minute;  
   lcd.setCursor(0,2);
   turnOn = true;
-    if ((minuteNow >= minuteTime[1][1] && minuteNow <= minuteTime[2][0]) 
-    || (minuteNow >= minuteTime[7][1] && minuteNow <= minuteTime[8][0]))
+    if ((minuteNow >= minuteTime[1][1] && minuteNow < minuteTime[2][0]) 
+    || (minuteNow >= minuteTime[7][1] && minuteNow < minuteTime[8][0]))
   {
       lcd.print("Gio ra choi! ");
       if ( endSchool && (minuteNow == minuteTime[1][1] || minuteNow == minuteTime[7][1]))
@@ -107,7 +107,7 @@ void CheckTime(){
           endSchool = false;  
       }
   }
-    else if (minuteNow >= minuteTime[4][1] || minuteNow >= minuteTime[9][1])
+    else if ( (minuteNow >= minuteTime[4][1] && minuteNow < minuteTime[5][0]) || minuteNow >= minuteTime[9][1])
   {
       lcd.print("TAN HOC! ");
       if (endSchool && ( minuteNow == minuteTime[4][1] || minuteNow == minuteTime[9][1]))
@@ -120,7 +120,7 @@ void CheckTime(){
     else for (int i = 0; i < 10; i++)
   { 
       endSchool = true; 
-      if (minuteNow >= minuteTime[i][0] && minuteNow <= minuteTime[i][1])
+      if (minuteNow >= minuteTime[i][0] && minuteNow < minuteTime[i][1])
       {
         if (turnOn)
         {
@@ -137,7 +137,7 @@ void CheckTime(){
         }
 
       }
-      else if ( (minuteNow >=  405 && minuteNow <= 420) || (minuteNow >=  765 && minuteNow <= 780) )
+      else if ( (minuteNow >=  405 && minuteNow < 420) || (minuteNow >=  765 && minuteNow < 780) )
       {
         if (turnOn)
         {
