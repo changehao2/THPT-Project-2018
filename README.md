@@ -15,5 +15,7 @@ SOME FUNCION
  - Display times to LCD
   void LCDTime();
   - Show class times and turn on audio at the right time
+  ...
   void CheckTime();
+  ...
 
