@@ -2,7 +2,7 @@
 BETTER PRODUCT DEVELOPMENT
 
  void CheckTime(){
-    // solved play just once at the right time 
+    // solved play just once at the right time :))
   minuteNow = hour*60 + minute;  
   lcd.setCursor(0,2);
   turnOn = true;
