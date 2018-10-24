@@ -8,7 +8,7 @@ TECHNOLOGY USED
  - DF PLAYER MP3
 
 ---
-SOME FUNCION
+SOME FUNCTION
 ---
  - Take times from DS1307
    void readDS1307();
