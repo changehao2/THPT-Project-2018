@@ -55,7 +55,7 @@ void setup()
 {
   Wire.begin();
   /* cài đặt thời gian cho module */
-//  setTime(20, 41, 20, 4, 21, 10, 18); // 12:30:45 CN 08-02-2015
+//  setTime(9, 35, 45, 4, 21, 10, 18); // 12:30:45 CN 08-02-2015
   Serial.begin(9600);
   lcd.begin(20, 4);
   mp3_set_serial (Serial);  //set Serial for DFPlayer-mini mp3 module 
@@ -107,7 +107,8 @@ void CheckTime(){
           endSchool = false;  
       }
   }
-    else if ( (minuteNow >= minuteTime[4][1] && minuteNow < minuteTime[5][0]) || minuteNow >= minuteTime[9][1])
+    else if ( (minuteNow >= minuteTime[4][1] && minuteNow < 765) // 765' = 12h45
+        || (minuteNow >= minuteTime[9][1] || minuteNow < 405 )) // 405' = 6h45
   {
       lcd.print("TAN HOC! ");
       if (endSchool && ( minuteNow == minuteTime[4][1] || minuteNow == minuteTime[9][1]))
