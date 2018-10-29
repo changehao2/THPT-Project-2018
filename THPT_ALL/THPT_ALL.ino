@@ -77,7 +77,7 @@ void loop()
 void LCDTime(){
   lcd.clear();
   lcd.setCursor(3,0);
-  lcd.print("Hello everyone!");
+  lcd.print("THPT Cam Lo");
 
   lcd.setCursor(0,1);
   lcd.print(hour);
